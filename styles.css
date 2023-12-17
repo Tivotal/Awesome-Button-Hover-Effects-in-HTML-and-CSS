@@ -1,0 +1,88 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .btn {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid #0b8c4c;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  overflow: hidden;
+  transition: 0.8s;
+}
+
+.wrapper .btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #0b8c4c;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.wrapper .btn1::before,
+.wrapper .btn3::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.wrapper .btn2::before,
+.wrapper .btn4::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.wrapper .btn3::before,
+.wrapper .btn4::before {
+  height: 180%;
+}
+
+.wrapper .btn1:hover:before,
+.wrapper .btn2:hover:before {
+  height: 180%;
+}
+
+.wrapper .btn3:hover:before,
+.wrapper .btn4:hover:before {
+  height: 0%;
+}
+
+.wrapper .btn1,
+.wrapper .btn2 {
+  color: #0b8c4c;
+}
+
+.wrapper .btn1:hover,
+.wrapper .btn2:hover {
+  color: #fff;
+}
+
+.wrapper .btn3,
+.wrapper .btn4 {
+  color: #fff;
+}
+
+.wrapper .btn3:hover,
+.wrapper .btn4:hover {
+  color: #0b8c4c;
+}
